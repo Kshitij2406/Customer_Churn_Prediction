@@ -8,9 +8,9 @@ import math
 scaler = StandardScaler()
 
 # Load the Random Forest model from the pickle file
-with open('knn_model.pkl', 'rb') as f:
-    model = pickle.load(f)
-
+# with open('knn_model.pkl', 'rb') as f:
+#     model = pickle.load(f)
+model = pickle.load((open('knn_model.pkl', 'rb')))
 # Define the columns for user input
 columns = ['CreditScore', 'Geography', 'Gender', 'Age', 'Tenure', 'Balance',
            'NumOfProducts', 'HasCrCard', 'IsActiveMember', 'EstimatedSalary']
